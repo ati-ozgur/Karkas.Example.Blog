@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,13 +12,13 @@
 
   <ItemGroup>
     <Reference Include="Karkas.Core.Data.SqlServer">
-      <HintPath>D:\atilla\Projects\my-projects\Karkas\Karkas.CodeGeneration\Karkas.CodeGeneration.WinApp\bin\Debug\net6.0-windows\Karkas.Core.Data.SqlServer.dll</HintPath>
+      <HintPath>..\thirdparty\Karkas.Core.Data.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Karkas.Core.DataUtil">
-      <HintPath>D:\atilla\Projects\my-projects\Karkas\Karkas.CodeGeneration\Karkas.CodeGeneration.WinApp\bin\Debug\net6.0-windows\Karkas.Core.DataUtil.dll</HintPath>
+      <HintPath>..\thirdparty\Karkas.Core.DataUtil.dll</HintPath>
     </Reference>
     <Reference Include="Karkas.Core.ExtensionsMethods">
-      <HintPath>D:\atilla\Projects\my-projects\Karkas\Karkas.CodeGeneration\Karkas.CodeGeneration.WinApp\bin\Debug\net6.0-windows\Karkas.Core.ExtensionsMethods.dll</HintPath>
+      <HintPath>..\thirdparty\Karkas.Core.ExtensionsMethods.dll</HintPath>
     </Reference>
   </ItemGroup>
 
