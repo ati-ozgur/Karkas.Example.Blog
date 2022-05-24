@@ -21,28 +21,38 @@ namespace Karkas.Example.Blog.WebApi.Controllers
         }
 
         // GET api/<BlogTypeController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{blogTypeNo}")]
+        public BlogType Get(int blogTypeNo)
         {
-            return "value";
+            BlogTypeDal dal = new BlogTypeDal();
+            BlogType bt = dal.SorgulaBlogTypeNoIle(blogTypeNo);
+            // TODO look about returning NotFound or giving an error
+            return bt;
         }
 
         // POST api/<BlogTypeController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] BlogType bt)
         {
+            BlogTypeDal blogTypeDal = new BlogTypeDal();
+            blogTypeDal.Insert(bt);
         }
 
         // PUT api/<BlogTypeController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public void Put([FromBody] BlogType bt)
         {
+            BlogTypeDal blogTypeDal = new BlogTypeDal();
+            blogTypeDal.Update(bt);
+
         }
 
         // DELETE api/<BlogTypeController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{blogTypeNo}")]
+        public void Delete(int blogTypeNo)
         {
+            BlogTypeDal blogTypeDal = new BlogTypeDal();
+            blogTypeDal.Delete(blogTypeNo);
         }
     }
 }
