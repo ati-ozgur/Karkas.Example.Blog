@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Karkas.Example.Blog.BackendLibrary\Karkas.Example.Blog.BackendLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Karkas.Core.Data.SqlServer">
+      <HintPath>D:\atilla\Projects\my-projects\Karkas\Karkas.CodeGeneration\Karkas.CodeGeneration.WinApp\bin\Debug\net6.0-windows\Karkas.Core.Data.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Karkas.Core.DataUtil">
+      <HintPath>D:\atilla\Projects\my-projects\Karkas\Karkas.CodeGeneration\Karkas.CodeGeneration.WinApp\bin\Debug\net6.0-windows\Karkas.Core.DataUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Karkas.Core.ExtensionsMethods">
+      <HintPath>D:\atilla\Projects\my-projects\Karkas\Karkas.CodeGeneration\Karkas.CodeGeneration.WinApp\bin\Debug\net6.0-windows\Karkas.Core.ExtensionsMethods.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
