@@ -1,0 +1,28 @@
+## Schemas
+LT schemas contains Look up (definition) Tables like city, blog type. 
+These tables are used in the screen most of the time as a drop down list.
+
+Our design will have following schemas:
+
+- LT_CONTENT_MANAGENT
+- CONTENT_MANAGENT
+
+- LT_COMMON
+- COMMON
+
+Every module schema will have corresponding LT schema.
+
+
+## Tables
+users
+	users will have type (normal,admin..)
+blog_posts (every blog post will be entered by a user)
+	1 to many comments
+		will be written by other users
+
+blog posts may contain images
+
+
+
+
+
