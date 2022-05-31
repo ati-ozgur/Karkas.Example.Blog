@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Blog Type List</title>
+
+<script>
+
+async function getListOfBlogTypes() {
+
+	const url = "http://localhost:5090/api/BlogType";
+	const response = await fetch(url);
+	const result = await response.json();
+
+	let output = "";
+	for (let index = 0; index < result.length; index++) {
+		const element = result[index];
+		const blogTypeNo = element["blogTypeNo"];
+		const blogTypeName = element["blogTypeName"];
+		
+		output += "blogTypeNo: " + blogTypeNo;
+		output += "blogTypeName: " + blogTypeName;
+		output += "<br />";
+	}
+	//console.log(result);
+	let par = document.getElementById("outputBlogTypes");
+	par.innerHTML = output;
+}
+
+</script>
+
+
+</head>
+<body>
+
+
+<button type="button" onclick="getListOfBlogTypes()">Get List of Blog Types</button>
+
+<p id="outputBlogTypes">
+
+
+</p>
+
+</body>
+</html> 

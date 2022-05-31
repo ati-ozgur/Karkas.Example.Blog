@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Blog Type List</title>
+
+<script>
+
+const url = document.location.href;
+let urlArr = url.split("?")
+let queryString = urlArr[1];
+let queryParams = queryString.split("=");
+let blogTypeNo = -1;
+if (queryParams[0] == "blogTypeNo")
+{
+    blogTypeNo = queryParams[1];
+}
+console.log("blogTypeNo" + blogTypeNo);
+
+
+
+</script>
+
+
+</head>
+<body>
+
+
+info
+
+
+
+</body>
+</html> 
