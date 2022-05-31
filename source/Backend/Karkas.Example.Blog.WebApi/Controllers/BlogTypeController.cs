@@ -25,7 +25,7 @@ namespace Karkas.Example.Blog.WebApi.Controllers
         public BlogType Get(int blogTypeNo)
         {
             BlogTypeDal dal = new BlogTypeDal();
-            BlogType bt = dal.SorgulaBlogTypeNoIle(blogTypeNo);
+            BlogType bt = dal.QueryByBlogTypeNo(blogTypeNo);
             // TODO look about returning NotFound or giving an error
             return bt;
         }

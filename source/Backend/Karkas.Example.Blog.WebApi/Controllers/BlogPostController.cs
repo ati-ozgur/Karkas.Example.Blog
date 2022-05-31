@@ -1,4 +1,4 @@
-﻿using Karkas.Example.Blog.BackendLibrary.Dal.ContentManagent;
+﻿using Karkas.Example.Blog.BackendLibrary.Bs.ContentManagent;
 using Karkas.Example.Blog.BackendLibrary.TypeLibrary.ContentManagent;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,8 +14,10 @@ namespace Karkas.Example.Blog.WebApi.Controllers
         [HttpGet]
         public IEnumerable<BlogPost> Get()
         {
-            BlogPostDal blogPostDal = new BlogPostDal();
-            var posts = blogPostDal.QueryAll();
+
+
+            BlogPostBs blogPostBs = new BlogPostBs();
+            var posts = blogPostBs.QueryAll();
 
             return posts;
         }
@@ -24,8 +26,8 @@ namespace Karkas.Example.Blog.WebApi.Controllers
         [HttpGet("{blogPostKey}")]
         public BlogPost Get(Guid blogPostKey)
         {
-            BlogPostDal blogPostDal = new BlogPostDal();
-            BlogPost bp = blogPostDal.SorgulaBlogPostKeyIle(blogPostKey);
+            BlogPostBs blogPostBs = new BlogPostBs();
+            BlogPost bp = blogPostBs.QueryByBlogPostKey(blogPostKey);
             return bp;
         }
 
@@ -33,8 +35,8 @@ namespace Karkas.Example.Blog.WebApi.Controllers
         [HttpPost]
         public void Post([FromBody] BlogPost bp)
         {
-            BlogPostDal blogPostDal = new BlogPostDal();
-            blogPostDal.Insert(bp);
+            BlogPostBs blogPostBs = new BlogPostBs();
+            blogPostBs.Insert(bp);
 
         }
 
@@ -42,16 +44,16 @@ namespace Karkas.Example.Blog.WebApi.Controllers
         [HttpPut]
         public void Put([FromBody] BlogPost bp)
         {
-            BlogPostDal blogPostDal = new BlogPostDal();
-            blogPostDal.Update(bp);
+            BlogPostBs blogPostBs = new BlogPostBs();
+            blogPostBs.Update(bp);
         }
 
         // DELETE api/<BlogPostController>/5
         [HttpDelete("{blogPostKey}")]
         public void Delete(Guid blogPostKey)
         {
-            BlogPostDal blogPostDal = new BlogPostDal();
-            blogPostDal.Delete(blogPostKey);
+            BlogPostBs blogPostBs = new BlogPostBs();
+            blogPostBs.Delete(blogPostKey);
         }
     }
 }

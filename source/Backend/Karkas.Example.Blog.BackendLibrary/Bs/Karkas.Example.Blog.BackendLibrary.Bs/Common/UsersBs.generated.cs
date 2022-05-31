@@ -27,9 +27,9 @@ namespace Karkas.Example.Blog.BackendLibrary.Bs.Common
 	{
 		dal.Delete( pUsersKey);
 	}
-	public Users SorgulaUsersKeyIle(Guid p1)
+	public Users QueryByUsersKey(Guid pUsersKey)
 	{
-		return dal.SorgulaUsersKeyIle(p1);
+		return dal.QueryByUsersKey(pUsersKey);
 	}
 }
 }

@@ -75,10 +75,10 @@ public partial class BlogCommentsDal : BaseDalSqlServer<BlogComments, AdoTemplat
 						(@BlogCommentsKey,@BlogPostKey,@UsersKey,@CommentTitle,@CommentText,@DateCreated)";
 		}
 	}
-	public BlogComments SorgulaBlogCommentsKeyIle(Guid p1)
+	public BlogComments QueryByBlogCommentsKey(Guid pBlogCommentsKey )
 	{
 		List<BlogComments> liste = new List<BlogComments>();
-		ExecuteQuery(liste,String.Format(" BlogCommentsKey = '{0}'", p1));		
+		ExecuteQuery(liste,String.Format(" BlogCommentsKey = '{0}'",pBlogCommentsKey));		
 		if (liste.Count > 0)
 		{
 			return liste[0];

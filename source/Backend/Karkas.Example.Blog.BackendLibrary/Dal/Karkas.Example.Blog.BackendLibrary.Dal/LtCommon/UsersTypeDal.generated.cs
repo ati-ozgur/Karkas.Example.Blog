@@ -71,10 +71,10 @@ public partial class UsersTypeDal : BaseDalSqlServer<UsersType, AdoTemplateSqlSe
 						(@UsersTypeNo,@TypeName)";
 		}
 	}
-	public UsersType SorgulaUsersTypeNoIle(int p1)
+	public UsersType QueryByUsersTypeNo(int pUsersTypeNo )
 	{
 		List<UsersType> liste = new List<UsersType>();
-		ExecuteQuery(liste,String.Format(" UsersTypeNo = '{0}'", p1));		
+		ExecuteQuery(liste,String.Format(" UsersTypeNo = '{0}'",pUsersTypeNo));		
 		if (liste.Count > 0)
 		{
 			return liste[0];

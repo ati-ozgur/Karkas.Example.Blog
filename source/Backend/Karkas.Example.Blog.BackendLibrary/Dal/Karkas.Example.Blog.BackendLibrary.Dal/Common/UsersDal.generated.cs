@@ -73,10 +73,10 @@ public partial class UsersDal : BaseDalSqlServer<Users, AdoTemplateSqlServer, Pa
 						(@UsersKey,@UserName,@email,@UsersTypeNo)";
 		}
 	}
-	public Users SorgulaUsersKeyIle(Guid p1)
+	public Users QueryByUsersKey(Guid pUsersKey )
 	{
 		List<Users> liste = new List<Users>();
-		ExecuteQuery(liste,String.Format(" UsersKey = '{0}'", p1));		
+		ExecuteQuery(liste,String.Format(" UsersKey = '{0}'",pUsersKey));		
 		if (liste.Count > 0)
 		{
 			return liste[0];

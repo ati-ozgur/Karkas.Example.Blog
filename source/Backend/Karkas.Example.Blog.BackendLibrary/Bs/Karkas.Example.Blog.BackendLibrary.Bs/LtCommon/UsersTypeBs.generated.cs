@@ -27,9 +27,9 @@ namespace Karkas.Example.Blog.BackendLibrary.Bs.LtCommon
 	{
 		dal.Delete( pUsersTypeNo);
 	}
-	public UsersType SorgulaUsersTypeNoIle(int p1)
+	public UsersType QueryByUsersTypeNo(int pUsersTypeNo)
 	{
-		return dal.SorgulaUsersTypeNoIle(p1);
+		return dal.QueryByUsersTypeNo(pUsersTypeNo);
 	}
 }
 }

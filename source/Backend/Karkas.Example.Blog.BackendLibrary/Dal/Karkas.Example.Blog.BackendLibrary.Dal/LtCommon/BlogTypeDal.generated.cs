@@ -71,10 +71,10 @@ public partial class BlogTypeDal : BaseDalSqlServer<BlogType, AdoTemplateSqlServ
 						(@BlogTypeNo,@BlogTypeName)";
 		}
 	}
-	public BlogType SorgulaBlogTypeNoIle(int p1)
+	public BlogType QueryByBlogTypeNo(int pBlogTypeNo )
 	{
 		List<BlogType> liste = new List<BlogType>();
-		ExecuteQuery(liste,String.Format(" BlogTypeNo = '{0}'", p1));		
+		ExecuteQuery(liste,String.Format(" BlogTypeNo = '{0}'",pBlogTypeNo));		
 		if (liste.Count > 0)
 		{
 			return liste[0];

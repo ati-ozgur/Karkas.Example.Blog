@@ -75,10 +75,10 @@ public partial class BlogPostDal : BaseDalSqlServer<BlogPost, AdoTemplateSqlServ
 						(@BlogPostKey,@PostText,@BlogTitle,@DateCreated,@UsersKey,@BlogTypeNo)";
 		}
 	}
-	public BlogPost SorgulaBlogPostKeyIle(Guid p1)
+	public BlogPost QueryByBlogPostKey(Guid pBlogPostKey )
 	{
 		List<BlogPost> liste = new List<BlogPost>();
-		ExecuteQuery(liste,String.Format(" BlogPostKey = '{0}'", p1));		
+		ExecuteQuery(liste,String.Format(" BlogPostKey = '{0}'",pBlogPostKey));		
 		if (liste.Count > 0)
 		{
 			return liste[0];

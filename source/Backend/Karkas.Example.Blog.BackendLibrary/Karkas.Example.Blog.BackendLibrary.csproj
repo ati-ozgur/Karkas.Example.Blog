@@ -22,4 +22,10 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Bs\" />
+    <Folder Include="Dal\" />
+    <Folder Include="TypeLibrary\" />
+  </ItemGroup>
+
 </Project>

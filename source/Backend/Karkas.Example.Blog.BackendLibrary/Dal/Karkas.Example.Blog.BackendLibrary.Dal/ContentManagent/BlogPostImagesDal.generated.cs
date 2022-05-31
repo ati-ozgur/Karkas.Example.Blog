@@ -72,10 +72,10 @@ public partial class BlogPostImagesDal : BaseDalSqlServer<BlogPostImages, AdoTem
 						(@BlogPostImagesKey,@BlogPostKey,@BlogPostImage)";
 		}
 	}
-	public BlogPostImages SorgulaBlogPostImagesKeyIle(Guid p1)
+	public BlogPostImages QueryByBlogPostImagesKey(Guid pBlogPostImagesKey )
 	{
 		List<BlogPostImages> liste = new List<BlogPostImages>();
-		ExecuteQuery(liste,String.Format(" BlogPostImagesKey = '{0}'", p1));		
+		ExecuteQuery(liste,String.Format(" BlogPostImagesKey = '{0}'",pBlogPostImagesKey));		
 		if (liste.Count > 0)
 		{
 			return liste[0];

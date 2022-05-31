@@ -27,9 +27,9 @@ namespace Karkas.Example.Blog.BackendLibrary.Bs.LtCommon
 	{
 		dal.Delete( pBlogTypeNo);
 	}
-	public BlogType SorgulaBlogTypeNoIle(int p1)
+	public BlogType QueryByBlogTypeNo(int pBlogTypeNo)
 	{
-		return dal.SorgulaBlogTypeNoIle(p1);
+		return dal.QueryByBlogTypeNo(pBlogTypeNo);
 	}
 }
 }

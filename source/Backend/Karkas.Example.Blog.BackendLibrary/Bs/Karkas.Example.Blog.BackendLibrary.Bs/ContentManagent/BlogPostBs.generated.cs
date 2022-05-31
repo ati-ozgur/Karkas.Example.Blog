@@ -27,9 +27,9 @@ namespace Karkas.Example.Blog.BackendLibrary.Bs.ContentManagent
 	{
 		dal.Delete( pBlogPostKey);
 	}
-	public BlogPost SorgulaBlogPostKeyIle(Guid p1)
+	public BlogPost QueryByBlogPostKey(Guid pBlogPostKey)
 	{
-		return dal.SorgulaBlogPostKeyIle(p1);
+		return dal.QueryByBlogPostKey(pBlogPostKey);
 	}
 }
 }
